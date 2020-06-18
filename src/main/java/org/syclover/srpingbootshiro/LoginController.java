@@ -15,10 +15,10 @@ public class LoginController {
         Subject subject = SecurityUtils.getSubject();
         try {
             subject.login(new UsernamePasswordToken(username, password));
-            System.out.println("登录成功!");
+            System.out.println("success");
         } catch (AuthenticationException e) {
             e.printStackTrace();
-            System.out.println("登录失败!");
+            System.out.println("failed");
         }
     }
     @GetMapping("/admin/page")
